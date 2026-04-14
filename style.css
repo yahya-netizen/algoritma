@@ -1,0 +1,263 @@
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #eef2ff;
+  --success: #22c55e;
+  --success-bg: #f0fdf4;
+  --danger: #ef4444;
+  --danger-bg: #fef2f2;
+  --warning: #f59e0b;
+  --warning-bg: #fffbeb;
+  --bg-body: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+  font-family: var(--font-sans); 
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+.nav { 
+  display: flex; 
+  gap: 10px; 
+  flex-wrap: wrap; 
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.nav-btn { 
+  padding: 8px 18px; 
+  font-size: 14px; 
+  font-weight: 500;
+  border: 1px solid var(--border); 
+  background: var(--bg-card); 
+  color: var(--text-muted); 
+  border-radius: 99px; 
+  cursor: pointer; 
+  transition: all 0.2s ease; 
+  text-decoration: none;
+}
+
+.nav-btn.active { 
+  background: var(--primary); 
+  color: white; 
+  border-color: var(--primary); 
+  box-shadow: var(--shadow);
+}
+
+.nav-btn:hover:not(.active) { 
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Progress Bar */
+.progress-bar { 
+  height: 6px; 
+  background: var(--border); 
+  border-radius: 99px; 
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.progress-fill { 
+  height: 100%; 
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark)); 
+  border-radius: 99px; 
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+/* Typography */
+h2 { font-size: 24px; font-weight: 700; color: var(--text-main); margin-bottom: 1rem; letter-spacing: -0.025em; }
+h3 { font-size: 18px; font-weight: 600; color: var(--text-main); margin-bottom: 0.75rem; }
+p { font-size: 16px; color: var(--text-muted); margin-bottom: 1rem; }
+
+/* Components */
+.card { 
+  background: var(--bg-card); 
+  border: 1px solid var(--border); 
+  border-radius: 16px; 
+  padding: 1.5rem; 
+  margin-bottom: 1.5rem; 
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.chip { 
+  display: inline-block; 
+  font-size: 12px; 
+  font-weight: 600; 
+  padding: 4px 12px; 
+  border-radius: 99px; 
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.chip-purple { background: var(--primary-light); color: var(--primary); }
+.chip-teal { background: #dcfce7; color: #15803d; }
+.chip-amber { background: var(--warning-bg); color: #92400e; }
+.chip-coral { background: #ffedd5; color: #9a3412; }
+
+/* Step List */
+.step-list { list-style: none; }
+.step-list li { 
+  display: flex; 
+  gap: 16px; 
+  align-items: flex-start; 
+  padding: 12px 0; 
+  border-bottom: 1px solid var(--border); 
+}
+.step-list li:last-child { border-bottom: none; }
+.step-num { 
+  min-width: 32px; 
+  height: 32px; 
+  border-radius: 10px; 
+  background: var(--primary); 
+  color: white; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 14px; 
+  font-weight: 700; 
+}
+
+/* Highlight Box */
+.highlight-box { 
+  background: var(--primary-light); 
+  border-left: 4px solid var(--primary); 
+  border-radius: 4px 12px 12px 4px; 
+  padding: 1rem 1.25rem; 
+  margin: 1.5rem 0; 
+}
+.highlight-box p { color: var(--primary-dark); font-weight: 500; margin-bottom: 0; }
+
+/* Layout */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+
+/* Buttons */
+.btn-primary { 
+  background: var(--primary); 
+  color: white; 
+  border: none; 
+  padding: 12px 24px; 
+  border-radius: 12px; 
+  font-size: 15px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: all 0.2s ease; 
+  text-decoration: none; 
+  display: inline-block;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+}
+.btn-primary:hover { 
+  background: var(--primary-dark); 
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(99, 102, 241, 0.5);
+}
+
+.btn-outline { 
+  background: transparent; 
+  border: 1px solid var(--border); 
+  color: var(--text-main); 
+  padding: 12px 24px; 
+  border-radius: 12px; 
+  font-size: 15px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-outline:hover { 
+  background: var(--bg-body); 
+  border-color: var(--text-muted);
+}
+
+/* Quiz Options */
+.quiz-opt { 
+  width: 100%; 
+  text-align: left; 
+  padding: 14px 18px; 
+  font-size: 15px; 
+  font-weight: 500;
+  border: 1px solid var(--border); 
+  background: var(--bg-card); 
+  color: var(--text-main); 
+  border-radius: 12px; 
+  cursor: pointer; 
+  margin-bottom: 10px; 
+  transition: all 0.2s ease; 
+}
+.quiz-opt:hover { 
+  background: var(--primary-light); 
+  border-color: var(--primary);
+}
+.quiz-opt.correct { 
+  background: var(--success-bg); 
+  border-color: var(--success); 
+  color: #166534; 
+}
+.quiz-opt.wrong { 
+  background: var(--danger-bg); 
+  border-color: var(--danger); 
+  color: #991b1b; 
+}
+
+/* Feedback */
+.feedback { 
+  font-size: 14px; 
+  font-weight: 600; 
+  padding: 12px 16px; 
+  border-radius: 10px; 
+  margin-top: 12px; 
+}
+.feedback.ok { background: var(--success-bg); color: #166534; border: 1px solid var(--success); }
+.feedback.no { background: var(--danger-bg); color: #991b1b; border: 1px solid var(--danger); }
+
+/* Simulation */
+.sim-box { 
+  border: 1px solid var(--border); 
+  border-radius: 16px; 
+  padding: 1.5rem; 
+  margin: 1.5rem 0; 
+  background: #fdfdfd;
+}
+.sim-step { 
+  padding: 10px 14px; 
+  color: var(--text-muted); 
+  border-radius: 8px;
+  margin-bottom: 4px;
+  transition: all 0.3s ease;
+}
+.sim-step.current { 
+  background: var(--primary-light); 
+  color: var(--primary-dark); 
+  font-weight: 600; 
+  transform: scale(1.02);
+  box-shadow: var(--shadow);
+}
+.sim-step.done { color: #cbd5e1; text-decoration: line-through; }
+
+/* Icons & Big Elements */
+.icon-big { font-size: 48px; margin-bottom: 1rem; }
+

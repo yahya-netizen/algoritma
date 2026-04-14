@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bahan Ajar Algoritma - Simulasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html" class="nav-btn">Pengantar</a>
+    <a href="definisi.html" class="nav-btn">Apa itu Algoritma?</a>
+    <a href="contoh.html" class="nav-btn">Contoh Nyata</a>
+    <a href="flowchart.html" class="nav-btn">Flowchart</a>
+    <a href="simulasi.html" class="nav-btn active">Simulasi</a>
+    <a href="latihan.html" class="nav-btn">Latihan</a>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+
+  <div class="page">
+    <h2>Simulasi Algoritma</h2>
+    <p style="margin-bottom:1rem;">Coba jalankan algoritma <strong>"Login ke akun"</strong> berikut. Tekan tombol <em>Jalankan</em> untuk melihat tiap langkah berjalan satu per satu.</p>
+
+    <div class="sim-box">
+      <div id="sim-steps">
+        <div class="sim-step">📥 Mulai</div>
+        <div class="sim-step">1. Buka halaman login</div>
+        <div class="sim-step">2. Masukkan username</div>
+        <div class="sim-step">3. Masukkan password</div>
+        <div class="sim-step">4. Klik tombol Login</div>
+        <div class="sim-step">5. Cek: apakah username & password benar?</div>
+        <div class="sim-step">   ➜ Ya → Masuk ke halaman utama</div>
+        <div class="sim-step">   ➜ Tidak → Tampilkan pesan error</div>
+        <div class="sim-step">📤 Selesai</div>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:12px; margin-top:1rem;">
+      <button class="btn-primary" id="simBtn" onclick="runSim()">▶ Jalankan Simulasi</button>
+      <span id="simStatus" style="font-size:13px; color:var(--color-text-secondary);"></span>
+    </div>
+
+    <div class="highlight-box" style="margin-top:1rem;">
+      <p>Langkah ke-5 adalah <strong>percabangan (kondisi)</strong>. Algoritma akan memilih jalur berbeda tergantung apakah username dan password benar atau tidak.</p>
+    </div>
+    <div style="display:flex; gap:8px; margin-top:1rem;">
+      <a href="flowchart.html" class="btn-outline">← Kembali</a>
+      <a href="latihan.html" class="btn-primary">Latihan Soal →</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

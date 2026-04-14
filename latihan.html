@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bahan Ajar Algoritma - Latihan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html" class="nav-btn">Pengantar</a>
+    <a href="definisi.html" class="nav-btn">Apa itu Algoritma?</a>
+    <a href="contoh.html" class="nav-btn">Contoh Nyata</a>
+    <a href="flowchart.html" class="nav-btn">Flowchart</a>
+    <a href="simulasi.html" class="nav-btn">Simulasi</a>
+    <a href="latihan.html" class="nav-btn active">Latihan</a>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+
+  <div class="page">
+    <h2>Latihan Soal</h2>
+    <p style="margin-bottom:1.25rem;">Jawab pertanyaan berikut untuk menguji pemahamanmu!</p>
+
+    <div class="card" id="q1">
+      <span class="chip chip-purple">Soal 1 dari 3</span>
+      <h3 style="margin-top:8px;">Apa pengertian algoritma yang paling tepat?</h3>
+      <div style="margin-top:12px;">
+        <button class="quiz-opt" onclick="answer(1,'A')">A. Program komputer yang dibuat dengan bahasa C++</button>
+        <button class="quiz-opt" onclick="answer(1,'B')">B. Langkah-langkah urut dan jelas untuk menyelesaikan masalah</button>
+        <button class="quiz-opt" onclick="answer(1,'C')">C. Rumus matematika yang digunakan dalam kalkulator</button>
+        <button class="quiz-opt" onclick="answer(1,'D')">D. Cara kerja mesin komputer mengolah listrik</button>
+      </div>
+      <div class="feedback" id="fb1"></div>
+    </div>
+
+    <div class="card" id="q2">
+      <span class="chip chip-teal">Soal 2 dari 3</span>
+      <h3 style="margin-top:8px;">Simbol <em>belah ketupat</em> dalam flowchart digunakan untuk menyatakan...</h3>
+      <div style="margin-top:12px;">
+        <button class="quiz-opt" onclick="answer(2,'A')">A. Proses perhitungan</button>
+        <button class="quiz-opt" onclick="answer(2,'B')">B. Awal atau akhir algoritma</button>
+        <button class="quiz-opt" onclick="answer(2,'C')">C. Pengambilan keputusan / percabangan</button>
+        <button class="quiz-opt" onclick="answer(2,'D')">D. Input dan output data</button>
+      </div>
+      <div class="feedback" id="fb2"></div>
+    </div>
+
+    <div class="card" id="q3">
+      <span class="chip chip-amber">Soal 3 dari 3</span>
+      <h3 style="margin-top:8px;">Algoritma yang baik harus memiliki sifat <em>finiteness</em>, artinya...</h3>
+      <div style="margin-top:12px;">
+        <button class="quiz-opt" onclick="answer(3,'A')">A. Memiliki banyak langkah yang kompleks</button>
+        <button class="quiz-opt" onclick="answer(3,'B')">B. Dapat dijalankan oleh siapa saja</button>
+        <button class="quiz-opt" onclick="answer(3,'C')">C. Harus menghasilkan output yang berguna</button>
+        <button class="quiz-opt" onclick="answer(3,'D')">D. Harus berhenti setelah sejumlah langkah tertentu</button>
+      </div>
+      <div class="feedback" id="fb3"></div>
+    </div>
+
+    <div id="score-box" style="display:none;" class="card" style="text-align:center;">
+      <h3 id="score-text" style="margin-bottom:8px;"></h3>
+      <p id="score-msg" style="font-size:14px;"></p>
+      <button class="btn-primary" onclick="resetQuiz()" style="margin-top:12px;">Ulangi Latihan</button>
+    </div>
+
+    <div style="display:flex; gap:8px; margin-top:1rem;">
+      <a href="simulasi.html" class="btn-outline">← Kembali</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

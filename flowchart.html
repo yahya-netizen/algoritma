@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bahan Ajar Algoritma - Flowchart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html" class="nav-btn">Pengantar</a>
+    <a href="definisi.html" class="nav-btn">Apa itu Algoritma?</a>
+    <a href="contoh.html" class="nav-btn">Contoh Nyata</a>
+    <a href="flowchart.html" class="nav-btn active">Flowchart</a>
+    <a href="simulasi.html" class="nav-btn">Simulasi</a>
+    <a href="latihan.html" class="nav-btn">Latihan</a>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+
+  <div class="page">
+    <h2>Flowchart (Diagram Alir)</h2>
+    <p style="margin-bottom:1rem;">Flowchart adalah cara menggambar algoritma menggunakan simbol-simbol khusus.</p>
+
+    <div class="two-col" style="margin-bottom:1rem;">
+      <div class="card">
+        <h3>Simbol-simbol penting</h3>
+        <div style="margin-top:10px;">
+          <div style="display:flex; align-items:center; gap:10px; padding:7px 0; border-bottom:0.5px solid var(--color-border-tertiary);">
+            <div style="width:50px; height:28px; background:#EEEDFE; border:1.5px solid #534AB7; border-radius:14px; flex-shrink:0;"></div>
+            <span style="font-size:13px; color:var(--color-text-secondary);">Mulai / Selesai (oval)</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; padding:7px 0; border-bottom:0.5px solid var(--color-border-tertiary);">
+            <div style="width:50px; height:28px; background:#E1F5EE; border:1.5px solid #0F6E56; border-radius:4px; flex-shrink:0;"></div>
+            <span style="font-size:13px; color:var(--color-text-secondary);">Proses (persegi)</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; padding:7px 0; border-bottom:0.5px solid var(--color-border-tertiary);">
+            <div style="width:50px; height:28px; position:relative; flex-shrink:0;">
+              <svg width="50" height="28"><polygon points="25,2 48,14 25,26 2,14" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"/></svg>
+            </div>
+            <span style="font-size:13px; color:var(--color-text-secondary);">Keputusan (belah ketupat)</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; padding:7px 0;">
+            <div style="width:50px; height:28px; background:#FAECE7; border:1.5px solid #993C1D; border-radius:4px; border-left: none; position:relative; flex-shrink:0; clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);"></div>
+            <span style="font-size:13px; color:var(--color-text-secondary);">Input/Output (jajaran genjang)</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Flowchart: Cek nilai kelulusan</h3>
+        <div style="margin-top:12px; text-align:center; font-size:13px;">
+          <div style="background:#EEEDFE; border:1.5px solid #534AB7; border-radius:20px; padding:6px 10px; display:inline-block; color:#3C3489; font-weight:500;">Mulai</div>
+          <div style="color:var(--color-text-tertiary); margin:4px;">↓</div>
+          <div style="background:#FAECE7; border:1.5px solid #993C1D; border-radius:4px; padding:6px 10px; display:inline-block; color:#4A1B0C;">Input nilai siswa</div>
+          <div style="color:var(--color-text-tertiary); margin:4px;">↓</div>
+          <svg width="120" height="44" style="display:block; margin:0 auto;"><polygon points="60,4 115,22 60,40 5,22" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"/><text x="60" y="26" text-anchor="middle" font-size="11" fill="#633806">Nilai ≥ 75?</text></svg>
+          <div style="display:flex; justify-content:space-around; margin-top:4px;">
+            <div style="text-align:center;">
+              <div style="font-size:11px; color:var(--color-text-tertiary);">Ya</div>
+              <div style="background:#E1F5EE; border:1.5px solid #0F6E56; border-radius:4px; padding:5px 8px; color:#085041; font-size:12px;">LULUS</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:11px; color:var(--color-text-tertiary);">Tidak</div>
+              <div style="background:#FCEBEB; border:1.5px solid #A32D2D; border-radius:4px; padding:5px 8px; color:#501313; font-size:12px;">TIDAK LULUS</div>
+            </div>
+          </div>
+          <div style="color:var(--color-text-tertiary); margin:4px;">↓</div>
+          <div style="background:#EEEDFE; border:1.5px solid #534AB7; border-radius:20px; padding:6px 10px; display:inline-block; color:#3C3489; font-weight:500;">Selesai</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; gap:8px; margin-top:1rem;">
+      <a href="contoh.html" class="btn-outline">← Kembali</a>
+      <a href="simulasi.html" class="btn-primary">Selanjutnya →</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
